@@ -1,6 +1,6 @@
 # Anki mimi
 
-- [中文](./README_CN.md)
+- [中文](./README_cn.md)
 
 This project is based on [Anki-Sidebar](https://github.com/tszones/Anki-Sidebar), with special thanks.
 

@@ -3,7 +3,7 @@
   "displayName": "Anki Mini",
   "description": "base on anki-sidebar",
   "icon": "market/icon.png",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.78.0"
   },

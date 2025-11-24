@@ -295,6 +295,7 @@ export class AnkiViewViewProvider implements vscode.WebviewViewProvider {
 
 	public async undo() {
 		// console.log("CodeView: undo");
+		// TODO 通过 AnkiConnect 调用的 guiUndo() 没有立即生效，必须手动回到 Anki 主界面才能触发撤销操作。
 		await this._ankiConnect.api.graphical.guiUndo();
 
 		await this.showQuestion();

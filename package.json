@@ -1,7 +1,7 @@
 {
-  "name": "ankisidebar",
-  "displayName": "Anki Sidebar",
-  "description": "Anki Sidebar seamlessly integrates Anki flashcard learning into VSCode, making it easier than ever to review and memorize your cards while coding.",
+  "name": "ankimini",
+  "displayName": "Anki Mini",
+  "description": "base on anki-sidebar",
   "icon": "market/icon.png",
   "version": "1.0.1",
   "engines": {
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/code-cola-js/Anki-Sidebar.git"
+    "url": "https://github.com/BruceFooo/anki-mini.git"
   },
   "publisher": "codeColajs",
   "activationEvents": [],
@@ -162,7 +162,7 @@
           },
           "ankiview.showButton": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "description": "Show answer button"
           },
           "ankiview.TimeBar.warnThreshold": {
@@ -212,7 +212,7 @@
     "lint": "eslint src --ext ts",
     "vup": "npm version patch --git-tag-version false && git cliff --exclude-path CHANGELOG.md --exclude-path package.json --exclude-path package-lock.json --latest -o CHANGELOG.md --unreleased --tag $(jq -r .version package.json) && git commit -a -m 'vup: v'$(jq -r .version package.json) && git tag -a $(jq -r .version package.json) -m 'auto update version number'",
     "test": "node ./out/test/runTest.js",
-    "build": "vsce package"
+    "build": "npx vsce package"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
@@ -223,6 +223,7 @@
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
     "@vscode/test-electron": "^2.3.2",
+    "@vscode/vsce": "^3.7.1",
     "eslint": "^8.40.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",

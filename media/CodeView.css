@@ -1,3 +1,17 @@
 .ankiview-answer-button {
     width: 23%;
 }
+/* Use VSCode theme colors for text and button styling */
+body {
+    background-color: var(--vscode-editor-background) !important;
+    color: var(--vscode-editor-foreground) !important;
+}
+ .ankiview-answer-button {
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    border: 1px solid var(--vscode-button-border);
+}
+/* Invert images to keep them visible in dark theme */
+img {
+    filter: invert(1);
+}

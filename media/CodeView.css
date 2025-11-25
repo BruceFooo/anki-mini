@@ -15,3 +15,8 @@ body {
 img {
     filter: invert(1);
 }
+/* 让卡片内容与编辑器字体保持一致 */
+.AnkiCard {
+  font-family: var(--vscode-font-family);
+}
+

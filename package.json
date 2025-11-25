@@ -24,6 +24,34 @@
     }
   },
   "contributes": {
+    "configuration": [
+      {
+        "title": "AnkiView",
+        "type": "object",
+        "properties": {
+          "ankiview.api": {
+            "type": "string",
+            "default": "http://localhost:8765",
+            "description": "AnkiConnect listen address"
+          },
+          "ankiview.fontSize": {
+            "type": "number",
+            "default": 11,
+            "description": "font size (px)"
+          },
+          "ankiview.showButton": {
+            "type": "boolean",
+            "default": false,
+            "description": "show the Button (default false)"
+          },
+          "ankiview.TimeBar.warnThreshold": {
+            "type": "number",
+            "default": 0.66,
+            "description": "Warning time multiplier (need reload)"
+          }
+        }
+      }
+    ],
     "views": {
       "explorer": [
         {
@@ -148,29 +176,6 @@
       {
         "command": "ankiview.command.sideview.answerCardEase4",
         "title": "AnkiView: Sideview Answer Card: Ease 4"
-      }
-    ],
-    "configuration": [
-      {
-        "title": "AnkiView",
-        "type": "object",
-        "properties": {
-          "ankiview.api": {
-            "type": "string",
-            "default": "http://localhost:8765",
-            "description": "AnkiConnect listen address"
-          },
-          "ankiview.showButton": {
-            "type": "boolean",
-            "default": false,
-            "description": "Show answer button"
-          },
-          "ankiview.TimeBar.warnThreshold": {
-            "type": "number",
-            "default": 0.66,
-            "description": "Warning time multiplier (need reload)"
-          }
-        }
       }
     ],
     "keybindings": [

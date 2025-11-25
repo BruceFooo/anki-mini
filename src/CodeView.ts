@@ -251,14 +251,24 @@ export class AnkiViewViewProvider implements vscode.WebviewViewProvider {
 		const styleCodeUri = this._view!.webview.asWebviewUri(vscode.Uri.joinPath(this._context.extensionUri, 'media', 'vscode.css'));
 		const styleAnkiUri = this._view!.webview.asWebviewUri(vscode.Uri.joinPath(this._context.extensionUri, 'media', 'CodeView.css'));
 		const nonce = this.getNonce();
-
+		// 读取用户设置的字体大小
+		const ankiFontSize = vscode.workspace
+			.getConfiguration(ankiviewPluginId)
+			.get<number>('fontSize', 11);
+		
 		const header = `
 		<head>
 			<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src self data:; style-src 'unsafe-inline' ${this._view!.webview.cspSource}; script-src 'nonce-${nonce}';">
 			<link href="${styleCodeUri}" rel="stylesheet">
 			<link href="${styleAnkiUri}" rel="stylesheet">
+			<style>
+                html, body, AnkiCard, .ankiview, anki, .ankiview-question, .ankiview-answer {
+                    font-size: ${ankiFontSize}px !important;
+                }
+            </style>
 		</head>
 		`;
+		// vscode.window.showInformationMessage(header);
 		const body = `
 		<body>
 			<AnkiCard>${content}</AnkiCard>
@@ -266,7 +276,7 @@ export class AnkiViewViewProvider implements vscode.WebviewViewProvider {
 		</body>
 		`;
 		this._view!.webview.html = `<html>${header}${body}</html>`;
-		this._view!.title = title === undefined ? "ANKI" : "ANKI: " + title;
+		this._view!.title = title === undefined ? "ANKI" : title;
 	}
 
 	public async error(err: unknown) {

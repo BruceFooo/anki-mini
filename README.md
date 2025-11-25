@@ -4,7 +4,7 @@
 
 ## 🚀 Overview
 A VS Code extension for Anki card review, built on [Anki‑Sidebar](https://github.com/tszones/Anki‑Sidebar).  
-Supports dark mode, color inversion, and keyboard shortcuts for seamless Anki integration.
+Supports dark mode, color inversion, keyboard shortcuts, **custom font size** for seamless Anki integration.
 
 ## ✅ Features
 - 🖼️ Image color inversion for dark mode compatibility
@@ -12,6 +12,7 @@ Supports dark mode, color inversion, and keyboard shortcuts for seamless Anki in
 - 📝 Markdown export of Anki cards
 - 🔄 Keyboard shortcuts for card navigation
 - 📚 Deck management and review tracking
+- 🖼️ **Font size customization** via settings
 
 ## 📦 Installation
 1. [Install VS Code](https://code.visualstudio.com/)

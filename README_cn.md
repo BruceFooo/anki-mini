@@ -16,7 +16,7 @@
 
 ## 📦 安装
 1. [安装 VS Code](https://code.visualstudio.com/)
-2. [从 VS Marketplace 安装插件](https://marketplace.visualstudio.com/items?itemName=frunoob.ankimini)
+2. [从 VS Marketplace 安装插件](https://marketplace.visualstudio.com/items?itemName=frunoob.ankimini)，你也可以下载 ankimini-2.0.1.vsix 文件进行本地安装。
 3. 在 `settings.json` 中配置 AnkiConnect API 和其他选项：
 
    ```json

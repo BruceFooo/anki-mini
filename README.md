@@ -16,7 +16,7 @@ Supports dark mode, color inversion, keyboard shortcuts, **custom font size** fo
 
 ## 📦 Installation
 1. [Install VS Code](https://code.visualstudio.com/)
-2. [Install the extension from VS Marketplace](https://marketplace.visualstudio.com/items?itemName=frunoob.ankimini)
+2. [Install the extension from VS Marketplace](https://marketplace.visualstudio.com/items?itemName=frunoob.ankimini), you can also download `ankimini-2.0.1.vsix` to install local.
 3. Configure AnkiConnect API and other options in `settings.json`:
 
    ```json
